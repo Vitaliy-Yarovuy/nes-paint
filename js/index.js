@@ -1,6 +1,6 @@
 var path;
 var group = new Group();
-var colors = ['red', 'green', 'blue', 'black'];
+var colors = ['black', 'red', 'green', 'blue', 'yelow', 'orange' ];
 var colorIndex = 0;
 
 var textItem = new PointText({
@@ -59,4 +59,6 @@ document.getElementById('reset').onclick = function(){
 
 document.getElementById('next').onclick = function(){
   colorIndex++;
+	var color = colors[colorIndex % colors.length];
+	document.getElementById('next').style = 'color: ' + color + '; border-color: ' + color + ';'
 };
